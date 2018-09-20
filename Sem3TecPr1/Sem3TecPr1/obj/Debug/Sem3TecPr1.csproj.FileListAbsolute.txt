@@ -1,0 +1,9 @@
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\bin\Debug\Sem3TecPr1.exe.config
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.csprojResolveAssemblyReference.cache
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.FormTractor.resources
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.Properties.Resources.resources
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.csproj.GenerateResource.Cache
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\bin\Debug\Sem3TecPr1.exe
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\bin\Debug\Sem3TecPr1.pdb
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.exe
+C:\FILES\Repos\Sem3TecPr1\Sem3TecPr1\obj\Debug\Sem3TecPr1.pdb
