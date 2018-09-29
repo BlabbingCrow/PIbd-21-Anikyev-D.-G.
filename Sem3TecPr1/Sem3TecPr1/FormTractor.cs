@@ -52,16 +52,16 @@ namespace Sem3TecPr1
             switch (name)
             {
                 case "buttonUp":
-                    tractor.MoveTransport(Tractor.Direction.Up);
+                    tractor.MoveTransport(Direction.Up);
                     break;
                 case "buttonDown":
-                    tractor.MoveTransport(Tractor.Direction.Down);
+                    tractor.MoveTransport(Direction.Down);
                     break;
                 case "buttonLeft":
-                    tractor.MoveTransport(Tractor.Direction.Left);
+                    tractor.MoveTransport(Direction.Left);
                     break;
                 case "buttonRight":
-                    tractor.MoveTransport(Tractor.Direction.Right);
+                    tractor.MoveTransport(Direction.Right);
                     break;
             }
             Draw();
