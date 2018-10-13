@@ -34,6 +34,7 @@
             this.buttonLeft = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonCreate = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTractors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,17 +99,28 @@
             // 
             this.buttonCreate.Location = new System.Drawing.Point(12, 12);
             this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCreate.Size = new System.Drawing.Size(130, 23);
             this.buttonCreate.TabIndex = 5;
-            this.buttonCreate.Text = "Создать";
+            this.buttonCreate.Text = "Создать бульдлозер";
             this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreateTractor_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(148, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Создать трактор";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonCreateTractorBase_Click);
             // 
             // FormTractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.buttonLeft);
@@ -131,6 +143,7 @@
         private System.Windows.Forms.Button buttonLeft;
         private System.Windows.Forms.Button buttonRight;
         private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button button1;
     }
 }
 

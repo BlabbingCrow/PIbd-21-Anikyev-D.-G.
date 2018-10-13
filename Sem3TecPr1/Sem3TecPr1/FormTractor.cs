@@ -6,7 +6,7 @@ namespace Sem3TecPr1
 {
     public partial class FormTractor : Form
     {
-        private Tractor tractor;
+        private ITransport tractor;
 
         /// <summary>         
         /// Конструктор         
@@ -28,14 +28,27 @@ namespace Sem3TecPr1
         }
 
         /// <summary> 
-        /// Обработка нажатия кнопки "Создать"         
+        /// Обработка нажатия кнопки "Создать бульдозер"         
         /// </summary>         
         /// <param name="sender"></param>         
         /// <param name="e"></param>
-        private void buttonCreate_Click(object sender, EventArgs e)
+        private void buttonCreateTractor_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            tractor = new Tractor(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue, Color.Yellow);
+            tractor = new Tractor(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue, Color.Yellow, true, true);
+            tractor.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxTractors.Width, pictureBoxTractors.Height);
+            Draw();
+        }
+
+        /// <summary> 
+        /// Обработка нажатия кнопки "Создать трактор"         
+        /// </summary>         
+        /// <param name="sender"></param>         
+        /// <param name="e"></param>
+        private void buttonCreateTractorBase_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            tractor = new TractorBase(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
             tractor.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxTractors.Width, pictureBoxTractors.Height);
             Draw();
         }
@@ -65,6 +78,7 @@ namespace Sem3TecPr1
                     break;
             }
             Draw();
-        }   
+        }
+
     }
 }
