@@ -13,7 +13,7 @@ namespace Sem3TecPr1
         /// <summary>         
         /// Ширина отрисовки автомобиля         
         /// </summary>         
-        protected const int carHeight = 90;
+        protected const int carHeight = 55;
 
         /// <summary>         
         /// Конструктор         
