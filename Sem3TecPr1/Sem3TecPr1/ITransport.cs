@@ -2,7 +2,7 @@
 
 namespace Sem3TecPr1
 {
-    interface ITransport
+    public interface ITransport
     {
         /// <summary>         
         /// Установка позиции автомобиля         
