@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
-            this.buttonSetTractorBase = new System.Windows.Forms.Button();
+            this.buttonAddTractor = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.pictureBoxTakeCar = new System.Windows.Forms.PictureBox();
             this.buttonTakeTractor = new System.Windows.Forms.Button();
@@ -50,15 +50,15 @@
             this.pictureBoxParking.TabIndex = 0;
             this.pictureBoxParking.TabStop = false;
             // 
-            // buttonSetTractorBase
+            // buttonAddTractor
             // 
-            this.buttonSetTractorBase.Location = new System.Drawing.Point(1006, 314);
-            this.buttonSetTractorBase.Name = "buttonSetTractorBase";
-            this.buttonSetTractorBase.Size = new System.Drawing.Size(165, 59);
-            this.buttonSetTractorBase.TabIndex = 1;
-            this.buttonSetTractorBase.Text = "Заказать технику";
-            this.buttonSetTractorBase.UseVisualStyleBackColor = true;
-            this.buttonSetTractorBase.Click += new System.EventHandler(this.buttonSetCar_Click);
+            this.buttonAddTractor.Location = new System.Drawing.Point(1006, 314);
+            this.buttonAddTractor.Name = "buttonAddTractor";
+            this.buttonAddTractor.Size = new System.Drawing.Size(165, 59);
+            this.buttonAddTractor.TabIndex = 1;
+            this.buttonAddTractor.Text = "Заказать технику";
+            this.buttonAddTractor.UseVisualStyleBackColor = true;
+            this.buttonAddTractor.Click += new System.EventHandler(this.buttonSetCar_Click);
             // 
             // groupBox
             // 
@@ -123,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 681);
             this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.groupBox);
-            this.Controls.Add(this.buttonSetTractorBase);
+            this.Controls.Add(this.buttonAddTractor);
             this.Controls.Add(this.pictureBoxParking);
             this.Name = "FormParking";
             this.Text = "Стоянка";
@@ -138,7 +138,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
-        private System.Windows.Forms.Button buttonSetTractorBase;
+        private System.Windows.Forms.Button buttonAddTractor;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.MaskedTextBox maskedTextBox;
         private System.Windows.Forms.Label label;
