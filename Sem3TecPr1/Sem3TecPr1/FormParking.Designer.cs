@@ -30,12 +30,12 @@
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
             this.buttonSetTractorBase = new System.Windows.Forms.Button();
-            this.buttonSetTractor = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.label = new System.Windows.Forms.Label();
-            this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.buttonTakeTractor = new System.Windows.Forms.Button();
             this.pictureBoxTakeCar = new System.Windows.Forms.PictureBox();
+            this.buttonTakeTractor = new System.Windows.Forms.Button();
+            this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.listBoxLevels = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeCar)).BeginInit();
@@ -52,23 +52,13 @@
             // 
             // buttonSetTractorBase
             // 
-            this.buttonSetTractorBase.Location = new System.Drawing.Point(1007, 12);
+            this.buttonSetTractorBase.Location = new System.Drawing.Point(1006, 314);
             this.buttonSetTractorBase.Name = "buttonSetTractorBase";
-            this.buttonSetTractorBase.Size = new System.Drawing.Size(165, 85);
+            this.buttonSetTractorBase.Size = new System.Drawing.Size(165, 59);
             this.buttonSetTractorBase.TabIndex = 1;
-            this.buttonSetTractorBase.Text = "Припарковать трактор";
+            this.buttonSetTractorBase.Text = "Заказать технику";
             this.buttonSetTractorBase.UseVisualStyleBackColor = true;
-            this.buttonSetTractorBase.Click += new System.EventHandler(this.buttonSetTractorBase_Click);
-            // 
-            // buttonSetTractor
-            // 
-            this.buttonSetTractor.Location = new System.Drawing.Point(1007, 103);
-            this.buttonSetTractor.Name = "buttonSetTractor";
-            this.buttonSetTractor.Size = new System.Drawing.Size(165, 85);
-            this.buttonSetTractor.TabIndex = 2;
-            this.buttonSetTractor.Text = "Припарковать бульдозер";
-            this.buttonSetTractor.UseVisualStyleBackColor = true;
-            this.buttonSetTractor.Click += new System.EventHandler(this.buttonSetTractor_Click);
+            this.buttonSetTractorBase.Click += new System.EventHandler(this.buttonSetCar_Click);
             // 
             // groupBox
             // 
@@ -83,21 +73,13 @@
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Забрать машину";
             // 
-            // label
+            // pictureBoxTakeCar
             // 
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(6, 31);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(42, 13);
-            this.label.TabIndex = 0;
-            this.label.Text = "Место:";
-            // 
-            // maskedTextBox
-            // 
-            this.maskedTextBox.Location = new System.Drawing.Point(54, 28);
-            this.maskedTextBox.Name = "maskedTextBox";
-            this.maskedTextBox.Size = new System.Drawing.Size(79, 20);
-            this.maskedTextBox.TabIndex = 1;
+            this.pictureBoxTakeCar.Location = new System.Drawing.Point(6, 108);
+            this.pictureBoxTakeCar.Name = "pictureBoxTakeCar";
+            this.pictureBoxTakeCar.Size = new System.Drawing.Size(153, 125);
+            this.pictureBoxTakeCar.TabIndex = 3;
+            this.pictureBoxTakeCar.TabStop = false;
             // 
             // buttonTakeTractor
             // 
@@ -109,20 +91,37 @@
             this.buttonTakeTractor.UseVisualStyleBackColor = true;
             this.buttonTakeTractor.Click += new System.EventHandler(this.buttonTakeTractor_Click);
             // 
-            // pictureBoxTakeCar
+            // maskedTextBox
             // 
-            this.pictureBoxTakeCar.Location = new System.Drawing.Point(6, 108);
-            this.pictureBoxTakeCar.Name = "pictureBoxTakeCar";
-            this.pictureBoxTakeCar.Size = new System.Drawing.Size(153, 125);
-            this.pictureBoxTakeCar.TabIndex = 3;
-            this.pictureBoxTakeCar.TabStop = false;
+            this.maskedTextBox.Location = new System.Drawing.Point(54, 28);
+            this.maskedTextBox.Name = "maskedTextBox";
+            this.maskedTextBox.Size = new System.Drawing.Size(79, 20);
+            this.maskedTextBox.TabIndex = 1;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(6, 31);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(42, 13);
+            this.label.TabIndex = 0;
+            this.label.Text = "Место:";
+            // 
+            // listBoxLevels
+            // 
+            this.listBoxLevels.FormattingEnabled = true;
+            this.listBoxLevels.Location = new System.Drawing.Point(1008, 12);
+            this.listBoxLevels.Name = "listBoxLevels";
+            this.listBoxLevels.Size = new System.Drawing.Size(164, 82);
+            this.listBoxLevels.TabIndex = 4;
+            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged);
             // 
             // FormParking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 681);
-            this.Controls.Add(this.buttonSetTractor);
+            this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.buttonSetTractorBase);
             this.Controls.Add(this.pictureBoxParking);
@@ -140,11 +139,11 @@
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
         private System.Windows.Forms.Button buttonSetTractorBase;
-        private System.Windows.Forms.Button buttonSetTractor;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.MaskedTextBox maskedTextBox;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.PictureBox pictureBoxTakeCar;
         private System.Windows.Forms.Button buttonTakeTractor;
+        private System.Windows.Forms.ListBox listBoxLevels;
     }
 }
