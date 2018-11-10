@@ -129,5 +129,15 @@ namespace Sem3TecPr1
                 }
             }
         }
+
+        /// <summary>
+        /// Метод обработки выбора элемента на listBoxLevels
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listBoxLevels_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Draw();
+        }
     }
 }
