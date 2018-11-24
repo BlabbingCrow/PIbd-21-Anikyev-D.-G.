@@ -67,6 +67,14 @@ namespace Sem3TecPr1
 
             // рисуем гоночные полоски       
             g.FillRectangle(br, _startPosX + 55, _startPosY + 25, 45, 5);
-        }   
+        }
+
+        /// Смена дополнительного цвета
+        /// </summary>
+        /// <param name="color"></param>
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
+        }
     }
 }

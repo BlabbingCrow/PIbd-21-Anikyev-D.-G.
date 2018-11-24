@@ -3,6 +3,8 @@ using System.Windows.Forms;
 
 namespace Sem3TecPr1
 {
+    public delegate void tractorDelegate(ITransport car);
+
     static class Program
     {
         /// <summary>
