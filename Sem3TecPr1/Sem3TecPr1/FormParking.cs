@@ -156,7 +156,8 @@ namespace Sem3TecPr1
         /// Обработка нажатия пункта меню "Загрузить"
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="e"></param>
+
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
