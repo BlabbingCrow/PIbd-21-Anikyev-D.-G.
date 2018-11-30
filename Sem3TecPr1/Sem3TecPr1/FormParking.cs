@@ -143,7 +143,8 @@ namespace Sem3TecPr1
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Неизвестная ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }
+
             }
         }
 
@@ -198,3 +199,4 @@ namespace Sem3TecPr1
         }
     }
 }
+
