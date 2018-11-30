@@ -3,6 +3,8 @@ using System.Windows.Forms;
 
 namespace Sem3TecPr1
 {
+    public delegate void tractorDelegate(ITransport car);
+
     static class Program
     {
         /// <summary>
@@ -14,7 +16,6 @@ namespace Sem3TecPr1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormParking());
-
         }
     }
 }

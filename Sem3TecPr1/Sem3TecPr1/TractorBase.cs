@@ -28,6 +28,26 @@ namespace Sem3TecPr1
             MainColor = mainColor;
         }
 
+        public TractorBase()
+        {
+
+        }
+
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="info">Информация по объекту</param>
+        public TractorBase(string info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 3)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+            }
+        }
+
         public override void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight; switch (direction)
@@ -104,6 +124,11 @@ namespace Sem3TecPr1
             g.FillEllipse(brBlack, _startPosX + 90, _startPosY + 30, 20, 20);
             g.FillEllipse(brGray, _startPosX + 25, _startPosY + 25, 20, 20);
             g.FillEllipse(brGray, _startPosX + 95, _startPosY + 35, 10, 10);
+        }
+
+        public override string ToString()
+        {
+            return MaxSpeed + ";" + Weight + ";" + MainColor.Name;
         }
     }
 }
