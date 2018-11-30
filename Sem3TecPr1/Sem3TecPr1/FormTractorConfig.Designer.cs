@@ -33,17 +33,17 @@
             this.labelTractor = new System.Windows.Forms.Label();
             this.labelTractorBase = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.labelMainColor = new System.Windows.Forms.Label();
             this.labelDopColor = new System.Windows.Forms.Label();
+            this.labelMainColor = new System.Windows.Forms.Label();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
-            this.panelColor1 = new System.Windows.Forms.Panel();
-            this.panelColor2 = new System.Windows.Forms.Panel();
-            this.panelColor3 = new System.Windows.Forms.Panel();
-            this.panelColor4 = new System.Windows.Forms.Panel();
-            this.panelColor5 = new System.Windows.Forms.Panel();
-            this.panelColor6 = new System.Windows.Forms.Panel();
-            this.panelColor7 = new System.Windows.Forms.Panel();
             this.panelColor8 = new System.Windows.Forms.Panel();
+            this.panelColor7 = new System.Windows.Forms.Panel();
+            this.panelColor6 = new System.Windows.Forms.Panel();
+            this.panelColor5 = new System.Windows.Forms.Panel();
+            this.panelColor4 = new System.Windows.Forms.Panel();
+            this.panelColor3 = new System.Windows.Forms.Panel();
+            this.panelColor2 = new System.Windows.Forms.Panel();
+            this.panelColor1 = new System.Windows.Forms.Panel();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -108,19 +108,6 @@
             this.panel.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelTractor_DragDrop);
             this.panel.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelTractor_DragEnter);
             // 
-            // labelMainColor
-            // 
-            this.labelMainColor.AllowDrop = true;
-            this.labelMainColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMainColor.Location = new System.Drawing.Point(15, 129);
-            this.labelMainColor.Name = "labelMainColor";
-            this.labelMainColor.Size = new System.Drawing.Size(150, 40);
-            this.labelMainColor.TabIndex = 3;
-            this.labelMainColor.Text = "Основной цвет";
-            this.labelMainColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelMainColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragDrop);
-            this.labelMainColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragEnter);
-            // 
             // labelDopColor
             // 
             this.labelDopColor.AllowDrop = true;
@@ -133,6 +120,19 @@
             this.labelDopColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelDopColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelDopColor_DragDrop);
             this.labelDopColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragEnter);
+            // 
+            // labelMainColor
+            // 
+            this.labelMainColor.AllowDrop = true;
+            this.labelMainColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMainColor.Location = new System.Drawing.Point(15, 129);
+            this.labelMainColor.Name = "labelMainColor";
+            this.labelMainColor.Size = new System.Drawing.Size(150, 40);
+            this.labelMainColor.TabIndex = 3;
+            this.labelMainColor.Text = "Основной цвет";
+            this.labelMainColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMainColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragDrop);
+            this.labelMainColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragEnter);
             // 
             // groupBoxColors
             // 
@@ -151,69 +151,19 @@
             this.groupBoxColors.TabStop = false;
             this.groupBoxColors.Text = "Цвета";
             // 
-            // panelColor1
+            // panelColor8
             // 
-            this.panelColor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelColor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor1.Location = new System.Drawing.Point(16, 23);
-            this.panelColor1.Name = "panelColor1";
-            this.panelColor1.Size = new System.Drawing.Size(40, 40);
-            this.panelColor1.TabIndex = 0;
-            this.panelColor1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            // 
-            // panelColor2
-            // 
-            this.panelColor2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panelColor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor2.Location = new System.Drawing.Point(76, 23);
-            this.panelColor2.Name = "panelColor2";
-            this.panelColor2.Size = new System.Drawing.Size(40, 40);
-            this.panelColor2.TabIndex = 1;
-            this.panelColor2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            // 
-            // panelColor3
-            // 
-            this.panelColor3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panelColor3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor3.Location = new System.Drawing.Point(16, 77);
-            this.panelColor3.Name = "panelColor3";
-            this.panelColor3.Size = new System.Drawing.Size(40, 40);
-            this.panelColor3.TabIndex = 2;
-            this.panelColor3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            // 
-            // panelColor4
-            // 
-            this.panelColor4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelColor4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor4.Location = new System.Drawing.Point(76, 77);
-            this.panelColor4.Name = "panelColor4";
-            this.panelColor4.Size = new System.Drawing.Size(40, 40);
-            this.panelColor4.TabIndex = 3;
-            this.panelColor4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            // 
-            // panelColor5
-            // 
-            this.panelColor5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelColor5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor5.Location = new System.Drawing.Point(16, 130);
-            this.panelColor5.Name = "panelColor5";
-            this.panelColor5.Size = new System.Drawing.Size(40, 40);
-            this.panelColor5.TabIndex = 4;
-            this.panelColor5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            // 
-            // panelColor6
-            // 
-            this.panelColor6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelColor6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor6.Location = new System.Drawing.Point(76, 130);
-            this.panelColor6.Name = "panelColor6";
-            this.panelColor6.Size = new System.Drawing.Size(40, 40);
-            this.panelColor6.TabIndex = 5;
-            this.panelColor6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelColor8.BackColor = System.Drawing.Color.HotPink;
+            this.panelColor8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor8.Location = new System.Drawing.Point(76, 182);
+            this.panelColor8.Name = "panelColor8";
+            this.panelColor8.Size = new System.Drawing.Size(40, 40);
+            this.panelColor8.TabIndex = 7;
+            this.panelColor8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelColor7
             // 
-            this.panelColor7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelColor7.BackColor = System.Drawing.Color.MediumPurple;
             this.panelColor7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelColor7.Location = new System.Drawing.Point(16, 182);
             this.panelColor7.Name = "panelColor7";
@@ -221,15 +171,65 @@
             this.panelColor7.TabIndex = 6;
             this.panelColor7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelColor8
+            // panelColor6
             // 
-            this.panelColor8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panelColor8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor8.Location = new System.Drawing.Point(76, 182);
-            this.panelColor8.Name = "panelColor8";
-            this.panelColor8.Size = new System.Drawing.Size(40, 40);
-            this.panelColor8.TabIndex = 7;
-            this.panelColor8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelColor6.BackColor = System.Drawing.Color.Aquamarine;
+            this.panelColor6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor6.Location = new System.Drawing.Point(76, 130);
+            this.panelColor6.Name = "panelColor6";
+            this.panelColor6.Size = new System.Drawing.Size(40, 40);
+            this.panelColor6.TabIndex = 5;
+            this.panelColor6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            // 
+            // panelColor5
+            // 
+            this.panelColor5.BackColor = System.Drawing.Color.YellowGreen;
+            this.panelColor5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor5.Location = new System.Drawing.Point(16, 130);
+            this.panelColor5.Name = "panelColor5";
+            this.panelColor5.Size = new System.Drawing.Size(40, 40);
+            this.panelColor5.TabIndex = 4;
+            this.panelColor5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            // 
+            // panelColor4
+            // 
+            this.panelColor4.BackColor = System.Drawing.Color.Yellow;
+            this.panelColor4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor4.Location = new System.Drawing.Point(76, 77);
+            this.panelColor4.Name = "panelColor4";
+            this.panelColor4.Size = new System.Drawing.Size(40, 40);
+            this.panelColor4.TabIndex = 3;
+            this.panelColor4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            // 
+            // panelColor3
+            // 
+            this.panelColor3.BackColor = System.Drawing.Color.LightSalmon;
+            this.panelColor3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor3.Location = new System.Drawing.Point(16, 77);
+            this.panelColor3.Name = "panelColor3";
+            this.panelColor3.Size = new System.Drawing.Size(40, 40);
+            this.panelColor3.TabIndex = 2;
+            this.panelColor3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            // 
+            // panelColor2
+            // 
+            this.panelColor2.BackColor = System.Drawing.Color.Tomato;
+            this.panelColor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor2.Location = new System.Drawing.Point(76, 23);
+            this.panelColor2.Name = "panelColor2";
+            this.panelColor2.Size = new System.Drawing.Size(40, 40);
+            this.panelColor2.TabIndex = 1;
+            this.panelColor2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            // 
+            // panelColor1
+            // 
+            this.panelColor1.BackColor = System.Drawing.Color.Silver;
+            this.panelColor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor1.Location = new System.Drawing.Point(16, 23);
+            this.panelColor1.Name = "panelColor1";
+            this.panelColor1.Size = new System.Drawing.Size(40, 40);
+            this.panelColor1.TabIndex = 0;
+            this.panelColor1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // buttonAdd
             // 

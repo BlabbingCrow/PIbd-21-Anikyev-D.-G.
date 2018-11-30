@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace Sem3TecPr1
 {
@@ -35,6 +36,21 @@ namespace Sem3TecPr1
             FrontEquipment = frontEquipment;
             BackEquipment = backEquipment;
         }
+
+        public Tractor(string info) : base(info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 6)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                FrontEquipment = Convert.ToBoolean(strs[4]);
+                BackEquipment = Convert.ToBoolean(strs[5]);
+            }
+        }
+
 
         public override void DrawTractor(Graphics g)
         {
@@ -75,6 +91,11 @@ namespace Sem3TecPr1
         public void SetDopColor(Color color)
         {
             DopColor = color;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + FrontEquipment + ";" + BackEquipment;
         }
     }
 }
