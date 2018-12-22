@@ -1,11 +1,12 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace Sem3TecPr1
 {
     /// <summary>     
     /// Класс отрисовки автомобиля     
     /// </summary> 
-    public class Tractor : TractorBase
+    public class Tractor : TractorBase, IComparable<Tractor>, IEquatable<Tractor>
     {
         /// <summary>         
         /// Дополнительный цвет         
@@ -35,6 +36,21 @@ namespace Sem3TecPr1
             FrontEquipment = frontEquipment;
             BackEquipment = backEquipment;
         }
+
+        public Tractor(string info) : base(info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 6)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                FrontEquipment = Convert.ToBoolean(strs[4]);
+                BackEquipment = Convert.ToBoolean(strs[5]);
+            }
+        }
+
 
         public override void DrawTractor(Graphics g)
         {
@@ -67,6 +83,104 @@ namespace Sem3TecPr1
 
             // рисуем гоночные полоски       
             g.FillRectangle(br, _startPosX + 55, _startPosY + 25, 45, 5);
-        }   
+        }
+
+        /// Смена дополнительного цвета
+        /// </summary>
+        /// <param name="color"></param>
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + FrontEquipment + ";" + BackEquipment;
+        }
+
+        /// <summary>
+        /// Метод интерфейса IComparable для класса Tractor
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(Tractor other)
+        {
+            var res = (this is TractorBase).CompareTo(other is TractorBase);
+            if (res != 0)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return DopColor.Name.CompareTo(other.DopColor.Name);
+            }
+            if (FrontEquipment != other.FrontEquipment)
+            {
+                return FrontEquipment.CompareTo(other.FrontEquipment);
+            }
+            if (BackEquipment != other.BackEquipment)
+            {
+                return BackEquipment.CompareTo(other.BackEquipment);
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// Метод интерфейса IEquatable для класса Tractor
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Tractor other)
+        {
+            var res = (this as TractorBase).Equals(other as TractorBase);
+            if (!res)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            if (FrontEquipment != other.FrontEquipment)
+            {
+                return false;
+            }
+            if (BackEquipment != other.BackEquipment)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            Tractor tractorObj = obj as Tractor;
+            if (tractorObj == null)
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(tractorObj);
+            }
+        }
+
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
