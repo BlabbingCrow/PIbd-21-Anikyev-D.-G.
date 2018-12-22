@@ -49,7 +49,8 @@ namespace Sem3TecPr1
         /// Текущий элемент для вывода через IEnumerator (будет обращаться по своему
         /// индексу к ключу словаря, по которму будет возвращаться запись)
         /// </summary>
-        private int _currentIndex;
+        private int _currentIndex;
+
 
         /// <summary>
         /// Конструктор

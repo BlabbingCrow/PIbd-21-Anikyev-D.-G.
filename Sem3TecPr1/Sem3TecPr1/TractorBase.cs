@@ -3,7 +3,8 @@ using System.Drawing;
 
 namespace Sem3TecPr1
 {
-    public class TractorBase : Vehicle, IComparable<TractorBase>, IEquatable<TractorBase>
+    public class TractorBase : Vehicle, IComparable<TractorBase>, IEquatable<TractorBase>
+
     {
         /// <summary>         
         /// Ширина отрисовки автомобиля         
